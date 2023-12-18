@@ -5,10 +5,19 @@ export async function fetchExistingUser(db, email) {
 }
 
 export async function insertNewUser(db, user) {
+
+  const publicChatRooms = await db
+    .collection("chatroom")
+    .find({ isPrivate: false })
+    .toArray();
+
+  const publicChatRoomIds = publicChatRooms.map((chatroom) => chatroom._id);
+
   const newUser = {
     name: user.name,
     email: user.email,
     bio: "",
+    chatrooms: publicChatRoomIds,
   };
 
   const result = await db.collection("user").insertOne(newUser);
