@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const LoginCallback = ({ applicationConfig, onLogin }) => {
   async function handleCallback() {
@@ -9,8 +9,6 @@ const LoginCallback = ({ applicationConfig, onLogin }) => {
     );
 
     let { access_token, code } = hashObject;
-
-    console.log(hashObject);
 
     if (code) {
       const token_endpoint_JSON = await fetch(config_url);
@@ -46,7 +44,7 @@ const LoginCallback = ({ applicationConfig, onLogin }) => {
 
       if (!response.ok) {
         throw new Error(
-          "Somehting went wrong when signing up with google",
+          "Something went wrong when signing up with google",
           response.statusText,
         );
       }

@@ -6,7 +6,6 @@ const LoginWithGoogle = ({ applicationConfig }) => {
   const { client_id, config_url } = applicationConfig.open_id_google;
 
   const loadAuthorizationUrl = async () => {
-    console.log("TRIGGERED");
 
     const res = await fetch(config_url);
     const discoveryDocument = await res.json();
