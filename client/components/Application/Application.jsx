@@ -12,6 +12,7 @@ import {
   createChatroom,
   addComment,
   fetchAllUsers,
+  deleteChatroom,
 } from "../../context/ApiContext";
 import { ApiContext } from "../../context/ApiContext";
 import Homepage from "./Homepage";
@@ -38,7 +39,7 @@ const Application = () => {
   }, []);
 
   if (!user.name) {
-    return <div>Loading...</div>;
+    return <div className="center-content-container">Loading...</div>;
   }
 
   if (errorMessage) {
@@ -57,6 +58,7 @@ const Application = () => {
           fetchAllUsers,
           loadUser,
           user,
+          deleteChatroom,
         }}
       >
         <main>

@@ -1,3 +1,5 @@
+import { ObjectId } from "mongodb";
+
 export async function fetchExistingUser(db, email) {
   return await db.collection("user").findOne({ email });
 }

@@ -21,8 +21,6 @@ export function createUserRoutes(db) {
     const id = req.params.id;
     const { newBio, newName } = req.body;
 
-    console.log(id);
-
     const userToUpdate = await db
       .collection("user")
       .findOne({ _id: new ObjectId(id) });
@@ -36,6 +34,34 @@ export function createUserRoutes(db) {
     }
 
     if (newName !== "") {
+      console.log("New Name: " + newName);
+      const chatroomIds = userToUpdate.chatrooms;
+      console.log(chatroomIds);
+      for (const chatroomId of chatroomIds) {
+        let chatRoom = await db
+          .collection("chatroom")
+          .findOne({ _id: new ObjectId(chatroomId) });
+
+        if (chatRoom.comments.length !== 0) {
+          console.log(chatRoom.comments[0].postedByName);
+        }
+
+        for (let i = 0; i < chatRoom.comments.length; i++) {
+          if (chatRoom.comments[i].postedByName === userToUpdate.name) {
+            console.log("Before Update: " + chatRoom.comments[i].postedByName);
+            chatRoom.comments[i].postedByName = newName;
+            console.log("After Update: " + chatRoom.comments[i].postedByName);
+          }
+        }
+
+        await db
+          .collection("chatroom")
+          .updateOne(
+            { _id: new ObjectId(chatroomId) },
+            { $set: { comments: chatRoom.comments } },
+          );
+      }
+
       userToUpdate.name = newName;
     }
 

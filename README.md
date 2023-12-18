@@ -1,11 +1,11 @@
 # **Introduction**
 
 This is an exam project for the course PG6301 - Web Development and API Design at Kristiana University College.
- 
+
 The technologies that have been taught throughout this course are React, Node.js, Express, MongoDB, Websockets, Google OAuth and Microsoft Entra ID.
 A more detailed description of the exam can be read in the file "PG6301 eksamen 2023(Norwegian).pdf".
 
-The exam got graded with an A. 
+The exam got graded with an A.
 
 ## Project description
 
@@ -21,12 +21,12 @@ Link to github:https://github.com/didrichsen/Kristiania-WebDevAndAPI-Exam-PG301
 
 - Clone the project
 - Create a .env file in root folder with the following:
-  - MONGODB:<<"Your connection string">>
-  - CLIENT_ID_GOOGLE:<<"Your google client id">>
-  - OPEN_ID_CONFIGURATION_GOOGLE:<<"config string google">>
-  - CLIENT_ID_MICROSOFT:<<"Your microsoft client id">>
-  - OPEN_ID_CONFIGURATION_MICROSOFT:<<"config string microsoft">>
-  - COOKIE_SECRET:<<"Your cookie secret">>
+  - MONGODB=<<"Your connection string">>
+  - CLIENT_ID_GOOGLE=<<"Your google client id">>
+  - OPEN_ID_CONFIGURATION_GOOGLE= https://accounts.google.com/.well-known/openid-configuration
+  - CLIENT_ID_MICROSOFT=<<"Your microsoft client id">>
+  - OPEN_ID_CONFIGURATION_MICROSOFT=https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration
+  - COOKIE_SECRET=<<"Your cookie secret">>
 - Run npm install in root folder
 
 ## **Functional Requirements**
@@ -35,7 +35,7 @@ Link to github:https://github.com/didrichsen/Kristiania-WebDevAndAPI-Exam-PG301
 2. [x] Users should be able to log in.
    - Users can log in with Google or Microsoft Entra ID.
 3. [x] A logged-in user should be able to see profile information (userinfo from google).
-   - When a user logs in, they will se their name and email fetched from google or microsoft.
+   - When a user logs in, they will see their name and email fetched from google or microsoft.
    - The user has the option to change their name and update their bio, but not their email.
    - The updated name will be saved in the database and the user will see the updated name and/or bio.
 4. [x] A logged-in user should see chat messages.
@@ -63,6 +63,7 @@ Link to github:https://github.com/didrichsen/Kristiania-WebDevAndAPI-Exam-PG301
     - Users can browse through other users under "Browse Users".
       - Here they can use "next profile" and "previous profile" to browse user profiles.
 12. [x] Users can change name and bio.
+    - When a user changes name, old messages will be updated with new name.
 13. [x] Users shall stay logged in when refreshing the page.
 14. [x] Errors from server shall be displayed nicely to user with the option of trying again.
     - When an error occurs, the user will be presented with an error message.

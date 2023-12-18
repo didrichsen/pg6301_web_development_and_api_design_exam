@@ -19,8 +19,9 @@ const ListChatrooms = () => {
       setErrorMessage(result.error.message);
     } else {
       setChatrooms(result.data);
-      setLoading(false);
     }
+
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -51,7 +52,7 @@ const ListChatrooms = () => {
   }
 
   if (loading) {
-    return <div>loading ...</div>;
+    return <div className="center-content-container">loading ...</div>;
   }
 
   return (

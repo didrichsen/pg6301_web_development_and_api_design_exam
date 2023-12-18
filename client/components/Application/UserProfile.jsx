@@ -38,7 +38,7 @@ const UserProfile = () => {
   }, []);
 
   if (loading) {
-    return <div>loading...</div>;
+    return <div className="center-content-container">loading...</div>;
   }
 
   if (errorMessage) {
@@ -55,8 +55,8 @@ const UserProfile = () => {
           <div>Email: {users[currentIndex].email}</div>
           <div>Bio: {users[currentIndex].bio}</div>
           <div className="container-next-and-previous" style={{ gap: "0.7em" }}>
-            <button onClick={nextUser}>Next User</button>
             <button onClick={prevUser}>Previous User</button>
+            <button onClick={nextUser}>Next User</button>
           </div>
         </>
       )}

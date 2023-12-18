@@ -8,6 +8,7 @@ export const ApiContext = React.createContext({
   addComment: async () => {},
   fetchAllUsers: async () => {},
   loadUser: async () => {},
+  deleteChatroom: async () => {},
 });
 
 export async function fetchChatrooms() {
@@ -62,14 +63,14 @@ export async function createChatroom(chatroom) {
   }
 }
 
-export async function addComment(craftedMessage, user, chatroom) {
+export async function addComment(newComment, user, chatroom) {
   try {
     const result = await fetch(`/api/chatroom/${chatroom._id}/comment`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify({ craftedMessage, user }),
+      body: JSON.stringify({ newComment, user }),
     });
 
     if (!result.ok) {
@@ -146,6 +147,25 @@ export async function updateChatroom(newChatroomTitle, newDescription, id) {
 
     if (!result.ok) {
       throw new Error("Something went wrong when updating chatroom");
+    }
+
+    return { error: null };
+  } catch (error) {
+    return { error };
+  }
+}
+
+export async function deleteChatroom(id) {
+  try {
+    const result = await fetch(`/api/chatroom/${id}`, {
+      method: "DELETE",
+      headers: {
+        "content-type": "application/json",
+      },
+    });
+
+    if (!result.ok) {
+      throw new Error("Something went wrong when deleting chatroom");
     }
 
     return { error: null };
