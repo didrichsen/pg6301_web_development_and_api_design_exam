@@ -1,12 +1,33 @@
 # **Introduction**
 
-This is an application where you can create chatrooms with different subjects. Chatrooms can be
+This is an exam project for the course PG6301 - Web Development and API Design at Kristiana University College.
+ 
+The technologies that have been taught throughout this course are React, Node.js, Express, MongoDB, Websockets, Google OAuth and Microsoft Entra ID.
+A more detailed description of the exam can be read in the file "PG6301 eksamen 2023(Norwegian).pdf".
+
+The exam got graded with an A. 
+
+## Project description
+
+The project is an application where you can create chatrooms with different subjects. Chatrooms can be
 created by registered users. They can be private or public. Public chatrooms can be joined by
 anyone. Private chatrooms can only be joined if you are whitelisted.
 
 Link to heroku deployment:https://exam-pg6301-2023-7a7d8664f40e.herokuapp.com/
 
-Link to github classroom:https://github.com/kristiania-pg6301-2023/pg6301eksamen-didrichsen/tree/main
+Link to github:https://github.com/didrichsen/Kristiania-WebDevAndAPI-Exam-PG301
+
+## **How to run**
+
+- Clone the project
+- Create a .env file in root folder with the following:
+  - MONGODB:<<"Your connection string">>
+  - CLIENT_ID_GOOGLE:<<"Your google client id">>
+  - OPEN_ID_CONFIGURATION_GOOGLE:<<"config string google">>
+  - CLIENT_ID_MICROSOFT:<<"Your microsoft client id">>
+  - OPEN_ID_CONFIGURATION_MICROSOFT:<<"config string microsoft">>
+  - COOKIE_SECRET:<<"Your cookie secret">>
+- Run npm install in root folder
 
 ## **Functional Requirements**
 
@@ -59,5 +80,3 @@ Backend tests are using a test-database, so create a .env file with the followin
 MONGODB:<<"Your connection string">>.
 
 Tests can be run from root folder with the command: "npm test".
-
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/pgC2zHhI)
