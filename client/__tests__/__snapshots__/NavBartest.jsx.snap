@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar Component renders navigation links correctly 1`] = `
+<div
+  className="nav-container"
+>
+  <nav
+    className="nav-bar"
+  >
+    <div
+      className="nav-elements"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+      <a
+        href="/profile"
+        onClick={[Function]}
+      >
+        Profile
+      </a>
+      <a
+        href="/users"
+        onClick={[Function]}
+      >
+        Browse Profiles
+      </a>
+      <a
+        href="/chatroom-create"
+        onClick={[Function]}
+      >
+        Create Chatroom
+      </a>
+      <a
+        href="/chatrooms"
+        onClick={[Function]}
+      >
+        Chatrooms
+      </a>
+      <div
+        className="divider"
+      />
+      <a
+        href="/logout"
+        onClick={[Function]}
+      >
+        Logout
+      </a>
+    </div>
+  </nav>
+</div>
+`;

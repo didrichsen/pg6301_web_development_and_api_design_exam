@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test of profile component Should show the profile of another registered user 1`] = `
+<div
+  className="center-content-container"
+  style={
+    {
+      "gap": "2em",
+    }
+  }
+>
+  <div>
+    Username: 
+    Demo User
+  </div>
+  <div>
+    Email: 
+    demo@example.com
+  </div>
+  <div>
+    Bio: 
+    This is a demo user.
+  </div>
+  <div
+    className="container-next-and-previous"
+    style={
+      {
+        "gap": "0.7em",
+      }
+    }
+  >
+    <button
+      onClick={[Function]}
+    >
+      Next User
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Previous User
+    </button>
+  </div>
+  <a
+    href="/profile"
+    onClick={[Function]}
+  >
+    <button>
+      To your profile
+    </button>
+  </a>
+</div>
+`;
+
+exports[`Test of profile component Should show the profile of next user when clicking the next user button 1`] = `
+<div
+  className="center-content-container"
+  style={
+    {
+      "gap": "2em",
+    }
+  }
+>
+  <div>
+    Username: 
+    First Demo User
+  </div>
+  <div>
+    Email: 
+    demo@example.com
+  </div>
+  <div>
+    Bio: 
+    This is a demo user.
+  </div>
+  <div
+    className="container-next-and-previous"
+    style={
+      {
+        "gap": "0.7em",
+      }
+    }
+  >
+    <button
+      onClick={[Function]}
+    >
+      Next User
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Previous User
+    </button>
+  </div>
+  <a
+    href="/profile"
+    onClick={[Function]}
+  >
+    <button>
+      To your profile
+    </button>
+  </a>
+</div>
+`;
+
+exports[`Test of profile component Should show the profile of next user when clicking the next user button 2`] = `
+<div
+  className="center-content-container"
+  style={
+    {
+      "gap": "2em",
+    }
+  }
+>
+  <div>
+    Username: 
+    Second Demo User
+  </div>
+  <div>
+    Email: 
+    another@example.com
+  </div>
+  <div>
+    Bio: 
+    This is another user.
+  </div>
+  <div
+    className="container-next-and-previous"
+    style={
+      {
+        "gap": "0.7em",
+      }
+    }
+  >
+    <button
+      onClick={[Function]}
+    >
+      Next User
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Previous User
+    </button>
+  </div>
+  <a
+    href="/profile"
+    onClick={[Function]}
+  >
+    <button>
+      To your profile
+    </button>
+  </a>
+</div>
+`;

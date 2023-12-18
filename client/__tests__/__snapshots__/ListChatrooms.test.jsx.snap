@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for list component should list a chatroom 1`] = `
+[
+  <h2
+    style={
+      {
+        "textAlign": "center",
+      }
+    }
+  >
+    Chatrooms
+  </h2>,
+  <h3
+    style={
+      {
+        "marginTop": "1em",
+        "textAlign": "center",
+      }
+    }
+  >
+    Join a green-room!
+  </h3>,
+  <div
+    className="chatroom-list"
+  >
+    <div
+      className="list-entry"
+    >
+      <a
+        className="custom-link"
+        href="/chatroom/1"
+        onClick={[Function]}
+      >
+        <h3
+          style={
+            {
+              "color": "green",
+            }
+          }
+        >
+          Lets talk about tests
+        </h3>
+      </a>
+      <p>
+        <strong>
+          Description:
+        </strong>
+        We talk about tests. A lot.
+      </p>
+      <p>
+        <strong>
+          Added by:
+        </strong>
+        test@test.no
+      </p>
+      <p>
+        <strong>
+          Status:
+        </strong>
+        Open for everyone
+      </p>
+    </div>
+  </div>,
+  <p
+    style={
+      {
+        "textAlign": "center",
+      }
+    }
+  >
+    Latest chatrooms created
+  </p>,
+]
+`;
+
+exports[`Tests for list component should list a chatroom and a link using id as param 1`] = `
+<div
+  className="list-entry"
+>
+  <a
+    className="custom-link"
+    href="/chatroom/13843535275430424"
+    onClick={[Function]}
+  >
+    <h3
+      style={
+        {
+          "color": "green",
+        }
+      }
+    >
+      Lets talk about tests
+    </h3>
+  </a>
+  <p>
+    <strong>
+      Description:
+    </strong>
+    We talk about tests. A lot.
+  </p>
+  <p>
+    <strong>
+      Added by:
+    </strong>
+    test@test.no
+  </p>
+  <p>
+    <strong>
+      Status:
+    </strong>
+    Open for everyone
+  </p>
+</div>
+`;
+
+exports[`Tests for list component should list that an error has occurred 1`] = `
+<div
+  className="error-message"
+>
+  <p>
+    Error: 
+    Something went wrong
+  </p>
+  <p>
+    Try again!
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Refresh Page
+  </button>
+</div>
+`;

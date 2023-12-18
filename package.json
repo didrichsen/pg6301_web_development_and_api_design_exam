@@ -1,0 +1,30 @@
+{
+  "name": "pg301-2023-exam",
+  "version": "1.0.0",
+  "description": "Exam in web-and api-design 2023",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently npm:dev:client npm:dev:server",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "check": "npm run check:prettier",
+    "check:prettier": "prettier --check .",
+    "prettier": "prettier --write .",
+    "test": "npm run test:server && npm run test:client",
+    "test:client": "cd client && npm test",
+    "test:server": "cd server && npm test",
+    "postinstall": "npm run install:client && npm run install:server",
+    "install:client": "cd client && npm install --include=dev",
+    "install:server": "cd server && npm install --include=dev",
+    "build": "npm run build:client",
+    "build:client": "cd client && npm run build",
+    "start": "cd server && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "prettier": "^3.0.3"
+  }
+}

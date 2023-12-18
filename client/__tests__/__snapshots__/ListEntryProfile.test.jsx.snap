@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for List Entry for profile should render a profile correctly 1`] = `
+<div
+  className="list-entry"
+>
+  <a
+    className="custom-link"
+    href="/users"
+    onClick={[Function]}
+  >
+    <h3>
+      Test Person
+    </h3>
+  </a>
+  <p>
+    <strong>
+      Email:
+    </strong>
+    test@test.no
+  </p>
+  <p>
+    <strong>
+      Bio:
+    </strong>
+    I am a test person
+  </p>
+</div>
+`;

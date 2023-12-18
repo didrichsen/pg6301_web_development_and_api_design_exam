@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing list entry for rendering chatrooms should render a private room with no link in header because users email are not whitelisted 1`] = `
+<div
+  className="list-entry"
+>
+  <h3
+    style={
+      {
+        "color": "red",
+      }
+    }
+  >
+    A test-room thats only for invited users, so email must be whitelisted
+  </h3>
+  <p>
+    <strong>
+      Description:
+    </strong>
+    This is a test-room that only invited users can join
+  </p>
+  <p>
+    <strong>
+      Added by:
+    </strong>
+    test@test.no
+  </p>
+  <p>
+    <strong>
+      Status:
+    </strong>
+    Private
+  </p>
+</div>
+`;
+
+exports[`Testing list entry for rendering chatrooms should render a private room, but it can be joiner by user since email is whitelisted. Should render a link as heading. 1`] = `
+<div
+  className="list-entry"
+>
+  <a
+    className="custom-link"
+    href="/chatroom/1234567"
+    onClick={[Function]}
+  >
+    <h3
+      style={
+        {
+          "color": "green",
+        }
+      }
+    >
+      A test-room thats only for invited users, so email must be whitelisted
+    </h3>
+  </a>
+  <p>
+    <strong>
+      Description:
+    </strong>
+    This is a test-room that only invited users can join
+  </p>
+  <p>
+    <strong>
+      Added by:
+    </strong>
+    test@test.no
+  </p>
+  <p>
+    <strong>
+      Status:
+    </strong>
+    Private
+  </p>
+</div>
+`;
+
+exports[`Testing list entry for rendering chatrooms should render a public room than can be entered by anyone  1`] = `
+<div
+  className="list-entry"
+>
+  <a
+    className="custom-link"
+    href="/chatroom/1234567"
+    onClick={[Function]}
+  >
+    <h3
+      style={
+        {
+          "color": "green",
+        }
+      }
+    >
+      A test-room that's open for anyone
+    </h3>
+  </a>
+  <p>
+    <strong>
+      Description:
+    </strong>
+    This is a test-room that anyone can join
+  </p>
+  <p>
+    <strong>
+      Added by:
+    </strong>
+    tes@test.no
+  </p>
+  <p>
+    <strong>
+      Status:
+    </strong>
+    Open for everyone
+  </p>
+</div>
+`;

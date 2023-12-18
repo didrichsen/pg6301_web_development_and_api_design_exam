@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test of profile component Should show profile for demo user 1`] = `
+<div
+  className="center-content-container"
+>
+  <div>
+    <strong>
+      Your profile
+    </strong>
+  </div>
+  <div>
+    Username:
+     
+    Test Person
+  </div>
+  <div>
+    Email: 
+    test@test.no
+  </div>
+  <div>
+    Bio:
+     
+    I am a test person
+  </div>
+  <button
+    onClick={[Function]}
+    style={
+      {
+        "width": "10em",
+      }
+    }
+  >
+    Edit
+  </button>
+</div>
+`;
