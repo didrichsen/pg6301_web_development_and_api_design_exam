@@ -9,6 +9,8 @@ export const ApiContext = React.createContext({
   fetchAllUsers: async () => {},
   loadUser: async () => {},
   deleteChatroom: async () => {},
+  fetchChatRoomById: async () => {},
+  updateChatroom: async () => {},
 });
 
 export async function fetchChatrooms() {

@@ -13,7 +13,7 @@ The project is an application where you can create chatrooms with different subj
 created by registered users. They can be private or public. Public chatrooms can be joined by
 anyone. Private chatrooms can only be joined if you are whitelisted.
 
-Link to heroku deployment:https://exam-pg6301-2023-7a7d8664f40e.herokuapp.com/
+Link to heroku deployment:https://exam-web-dev-and-api-design-7ff1a0be6f3c.herokuapp.com/
 
 Link to github:https://github.com/didrichsen/Kristiania-WebDevAndAPI-Exam-PG301
 

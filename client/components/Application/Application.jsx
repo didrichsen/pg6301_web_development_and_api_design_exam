@@ -13,6 +13,8 @@ import {
   addComment,
   fetchAllUsers,
   deleteChatroom,
+    fetchChatRoomById,
+    updateChatroom,
 } from "../../context/ApiContext";
 import { ApiContext } from "../../context/ApiContext";
 import Homepage from "./Homepage";
@@ -59,6 +61,8 @@ const Application = () => {
           loadUser,
           user,
           deleteChatroom,
+            fetchChatRoomById,
+            updateChatroom,
         }}
       >
         <main>

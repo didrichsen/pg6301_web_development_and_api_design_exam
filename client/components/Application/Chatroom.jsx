@@ -1,10 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useContext, useEffect, useMemo, useState } from "react";
-import {
-  ApiContext,
-  fetchChatRoomById,
-  updateChatroom,
-} from "../../context/ApiContext";
+import {ApiContext} from "../../context/ApiContext";
 import { configureWebSocket } from "../../utils/webSocket";
 import HandleError from "../ErrorHandling/HandleError";
 
@@ -12,8 +8,6 @@ const Chatroom = () => {
   const { id } = useParams();
   const [chatroom, setChatroom] = useState(null);
   const [newComment, setNewComment] = useState("");
-  const { user, fetchChatrooms, addComment, deleteChatroom } =
-    useContext(ApiContext);
   const [webSocket, setWebSocket] = useState(null);
   const [isEditable, setIsEditable] = useState(false);
   const [newChatroomTitle, setNewChatroomTitle] = useState("");
@@ -21,8 +15,11 @@ const Chatroom = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [loading, setLoading] = useState(true);
 
+  const { user, fetchChatrooms, addComment, deleteChatroom,fetchChatRoomById,updateChatroom } = useContext(ApiContext);
+
   const navigate = useNavigate();
 
+  //Disable/Enable save button when in edit mode
   const isValidTitle = useMemo(() => {
     return newChatroomTitle.length === 0 && newDescription.length === 0;
   }, [newChatroomTitle, newDescription]);
@@ -31,6 +28,7 @@ const Chatroom = () => {
     return newComment.length === 0;
   }, [newComment]);
 
+  //Submit comment to chatroom and broadcast through websocket if successful.
   const handleSubmitComment = async (e) => {
     e.preventDefault();
 
@@ -46,13 +44,6 @@ const Chatroom = () => {
       );
 
       setNewComment("");
-    }
-  };
-
-  const handleNewComment = async (event) => {
-    const data = JSON.parse(event.data);
-    if (data.type === "comment") {
-      await loadChatroom();
     }
   };
 
@@ -77,6 +68,14 @@ const Chatroom = () => {
     setLoading(false);
   };
 
+  //Event listener for websocket
+  const handleNewComment = async (event) => {
+    const data = JSON.parse(event.data);
+    if (data.type === "comment") {
+      await loadChatroom();
+    }
+  };
+
   useEffect(() => {
     loadChatroom();
   }, []);
@@ -90,6 +89,7 @@ const Chatroom = () => {
     setIsEditable(!isEditable);
   };
 
+  //Update title and description for room. Can only be done by admin.
   const handleUpdates = async () => {
     const result = await updateChatroom(newChatroomTitle, newDescription, id);
 

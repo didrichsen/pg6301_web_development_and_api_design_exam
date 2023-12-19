@@ -10,6 +10,7 @@ const LoginCallback = ({ applicationConfig, onLogin }) => {
 
     let { access_token, code } = hashObject;
 
+    //If It's Microsoft, then we will have a code validation before we can get the access token.
     if (code) {
       const token_endpoint_JSON = await fetch(config_url);
 
@@ -33,6 +34,7 @@ const LoginCallback = ({ applicationConfig, onLogin }) => {
       access_token = json.access_token;
     }
 
+    //At this point, both Microsoft and Google will have an access token.
     if (access_token) {
       const response = await fetch("/api/auth/login/access_token", {
         method: "POST",
@@ -50,6 +52,7 @@ const LoginCallback = ({ applicationConfig, onLogin }) => {
       }
     }
 
+    //Send user to homepage.
     await onLogin();
   }
 

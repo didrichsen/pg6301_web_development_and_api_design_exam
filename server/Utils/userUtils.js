@@ -6,6 +6,8 @@ export async function fetchExistingUser(db, email) {
 
 export async function insertNewUser(db, user) {
 
+  //All
+
   const publicChatRooms = await db
     .collection("chatroom")
     .find({ isPrivate: false })

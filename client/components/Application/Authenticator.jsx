@@ -5,6 +5,8 @@ import Application from "./Application";
 import { BrowserRouter } from "react-router-dom";
 
 const Authenticator = () => {
+
+  //Fetching microsoft and google config from backend.
   async function loadConfig() {
     const response = await fetch("/api/auth/config");
     if (!response.ok) {
@@ -15,6 +17,7 @@ const Authenticator = () => {
     setApplicationConfig(config);
   }
 
+  //Sending user to homepage after login/callback has done its thing.
   async function onLogin() {
     await loadConfig();
     window.location = "/";
@@ -30,6 +33,7 @@ const Authenticator = () => {
     return <div>Loading...</div>;
   }
 
+  //Checking if user is redirected from microsoft or google. If so, render LoginCallback component.
   if (window.location.pathname === "/login/callback") {
     return (
       <LoginCallback applicationConfig={applicationConfig} onLogin={onLogin} />
