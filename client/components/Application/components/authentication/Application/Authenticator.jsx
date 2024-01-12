@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import LoginCallback from "../Authentication/OpenIdConnect/Callback/LoginCallback";
+import LoginCallback from "../OpenIdConnect/Callback/LoginCallback";
 import LoginPage from "./LoginPage";
-import Application from "./Application";
+import Application from "../../../Application";
 import { BrowserRouter } from "react-router-dom";
 
 const Authenticator = () => {

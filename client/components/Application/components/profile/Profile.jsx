@@ -1,6 +1,6 @@
 import { useContext, useMemo, useState } from "react";
-import { ApiContext, updateUser } from "../../context/ApiContext";
-import HandleError from "../ErrorHandling/HandleError";
+import { ApiContext, updateUser } from "../../../../context/ApiContext";
+import HandleError from "../../../ErrorHandling/HandleError";
 import "./profile.css";
 
 const Profile = () => {

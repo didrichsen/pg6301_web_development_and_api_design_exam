@@ -1,6 +1,6 @@
 # **Introduction**
 
-This is a practical exam designed to assess your mastery of the technologies and concepts covered in the course: React, Express, MongoDB, Heroku, Jest, OpenId Connect, and Web Sockets. The practical nature of the exam means that you will be evaluated based on what you create and how it functions, rather than theoretical knowledge you have acquired. To demonstrate this, you are required to build an application where users can communicate in a chatroom. The learning objectives that the exam aims to demonstrate are as follows:
+This is a practical 48-hour-exam designed to assess your mastery of the technologies and concepts covered in the course: React, Express, MongoDB, Heroku, Jest, OpenId Connect, and Web Sockets. The practical nature of the exam means that you will be evaluated based on what you create and how it functions, rather than theoretical knowledge you have acquired. To demonstrate this, you are required to build an application where users can communicate in a chatroom. The learning objectives that the exam aims to demonstrate are as follows:
 
 1. Create an app using Parcel, Express, Concurrently, Prettier, and Jest.
 2. Set up a functional React app with React Router, handling loading state, and error handling.

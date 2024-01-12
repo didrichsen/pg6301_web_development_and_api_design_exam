@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from "react";
-import ListEntryChatrooms from "./ListEntryChatrooms";
-import { ApiContext } from "../../context/ApiContext";
-import { configureWebSocket } from "../../utils/webSocket";
-import HandleError from "../ErrorHandling/HandleError";
+import ListEntryChatrooms from "../list/ListEntryChatrooms";
+import { ApiContext } from "../../../../context/ApiContext";
+import { configureWebSocket } from "../../../../utils/webSocket";
+import HandleError from "../../../ErrorHandling/HandleError";
 
-const ListChatrooms = () => {
+const ViewChatrooms = () => {
   const [message, setMessage] = useState([]);
   const { fetchChatrooms } = useContext(ApiContext);
   const [webSocket, setWebSocket] = useState(null);
@@ -84,4 +84,4 @@ const ListChatrooms = () => {
   );
 };
 
-export default ListChatrooms;
+export default ViewChatrooms;

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { ApiContext } from "../../context/ApiContext";
+import { ApiContext } from "../../../../context/ApiContext";
 
 const ListEntryChatrooms = ({ chatroom }) => {
   const { _id, chatroomTitle, description, admin, isPrivate, participants } =

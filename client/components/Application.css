@@ -67,6 +67,7 @@ a:hover {
   flex-wrap: wrap;
   column-gap: 1em;
   padding-inline: 1em;
+
 }
 
 nav .divider {
@@ -79,6 +80,7 @@ nav .divider {
   flex-direction: column;
   justify-content: center;
   background-color: #0e131f;
+  border-bottom: 1px solid white;
 }
 
 /*Navbar end*/

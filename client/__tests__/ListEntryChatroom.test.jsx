@@ -1,7 +1,7 @@
 import renderer, { act } from "react-test-renderer";
 import { MemoryRouter } from "react-router-dom";
 import { ApiContext } from "../context/ApiContext";
-import ListEntryChatrooms from "../components/Application/ListEntryChatrooms";
+import ListEntryChatrooms from "../components/Application/components/list/ListEntryChatrooms";
 
 describe("Testing list entry for rendering chatrooms", () => {
   it("should render a public room than can be entered by anyone ", async () => {

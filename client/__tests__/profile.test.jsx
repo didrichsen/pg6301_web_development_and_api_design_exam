@@ -1,7 +1,7 @@
 import renderer, { act } from "react-test-renderer";
 import { MemoryRouter } from "react-router-dom";
 import { ApiContext } from "../context/ApiContext";
-import Profile from "../components/Application/Profile";
+import Profile from "../components/Application/components/profile/Profile";
 
 describe("Test of profile component", () => {
   it("Should show profile for demo user", async () => {

@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./NavBar";
-import Logout from "../Authentication/Application/Logout";
+import Navbar from "./components/nav/NavBar";
+import Logout from "./components/authentication/Application/Logout";
 import { useEffect, useState } from "react";
-import Profile from "./Profile";
-import ListChatrooms from "./ListChatrooms";
-import CreateChatroom from "./CreateChatroom";
-import Chatroom from "./Chatroom";
+import Profile from "./components/profile/Profile";
+import ViewChatrooms from "./components/chatroom/ViewChatrooms";
+import CreateChatroom from "./components/chatroom/CreateChatroom";
+import Chatroom from "./components/chatroom/Chatroom";
 import {
   fetchChatrooms,
   fetchUser,
@@ -17,8 +17,8 @@ import {
     updateChatroom,
 } from "../../context/ApiContext";
 import { ApiContext } from "../../context/ApiContext";
-import Homepage from "./Homepage";
-import UserProfile from "./UserProfile";
+import Homepage from "./components/home/Homepage";
+import UserProfile from "./components/profile/UserProfile";
 import HandleError from "../ErrorHandling/HandleError";
 
 const Application = () => {
@@ -71,7 +71,7 @@ const Application = () => {
             <Route path={"/chatroom/:id"} element={<Chatroom />} />
             <Route path={"/users"} element={<UserProfile />} />
 
-            <Route path={"/chatrooms"} element={<ListChatrooms />} />
+            <Route path={"/chatrooms"} element={<ViewChatrooms />} />
             <Route path={"/chatroom-create"} element={<CreateChatroom />} />
 
             <Route path={"/profile"} element={<Profile />} />

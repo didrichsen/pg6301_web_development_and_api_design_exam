@@ -1,7 +1,8 @@
 import { Link, useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-import { ApiContext } from "../../context/ApiContext";
-import HandleError from "../ErrorHandling/HandleError";
+import { ApiContext } from "../../../../context/ApiContext";
+import HandleError from "../../../ErrorHandling/HandleError";
+import "./profile.css";
 
 const UserProfile = () => {
   const [users, setUsers] = useState([]);
@@ -46,23 +47,29 @@ const UserProfile = () => {
   }
 
   return (
-    <div className="center-content-container" style={{ gap: "2em" }}>
+    <div className="profile-container">
       {users.length === 0 ? (
         <p>Loading...</p>
       ) : (
         <>
-          <div>Username: {users[currentIndex].name}</div>
-          <div>Email: {users[currentIndex].email}</div>
-          <div>Bio: {users[currentIndex].bio}</div>
-          <div className="container-next-and-previous" style={{ gap: "0.7em" }}>
+          <div className="input-username input-container">
+            <div>Username</div>
+            <div>{users[currentIndex].name}</div>
+          </div>
+          <div className="input-email input-container">
+            <div>Email</div>
+            <div>{users[currentIndex].email}</div>
+          </div>
+          <div className="input-bio input-container">
+            <div>Bio</div>
+            <div>{users[currentIndex].bio}</div>
+          </div>
+          <div className="edit-button">
             <button onClick={prevUser}>Previous User</button>
             <button onClick={nextUser}>Next User</button>
           </div>
         </>
       )}
-      <Link to={`/profile`}>
-        <button>To your profile</button>
-      </Link>
     </div>
   );
 };

@@ -1,8 +1,8 @@
 import renderer, { act } from "react-test-renderer";
 import { MemoryRouter } from "react-router-dom";
-import ListChatrooms from "../components/Application/ListChatrooms";
+import ViewChatrooms from "../components/Application/components/chatroom/ViewChatrooms";
 import { ApiContext } from "../context/ApiContext";
-import ListEntryChatrooms from "../components/Application/ListEntryChatrooms";
+import ListEntryChatrooms from "../components/Application/components/list/ListEntryChatrooms";
 import { configureWebSocket } from "../utils/webSocket";
 
 jest.mock("../utils/webSocket");
@@ -50,7 +50,7 @@ describe("Tests for list component", () => {
       component = renderer.create(
         <MemoryRouter>
           <ApiContext.Provider value={{ fetchChatrooms }}>
-            <ListChatrooms />
+            <ViewChatrooms />
           </ApiContext.Provider>
         </MemoryRouter>,
       );
@@ -81,7 +81,7 @@ describe("Tests for list component", () => {
       component = renderer.create(
         <MemoryRouter>
           <ApiContext.Provider value={{ fetchChatrooms }}>
-            <ListChatrooms />
+            <ViewChatrooms />
           </ApiContext.Provider>
         </MemoryRouter>,
       );
@@ -105,7 +105,7 @@ describe("Tests for list component", () => {
       component = renderer.create(
         <MemoryRouter>
           <ApiContext.Provider value={{ fetchChatrooms }}>
-            <ListChatrooms />
+            <ViewChatrooms />
           </ApiContext.Provider>
         </MemoryRouter>,
       );

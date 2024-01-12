@@ -1,6 +1,6 @@
 import renderer, { act } from "react-test-renderer";
 import { MemoryRouter } from "react-router-dom";
-import ListEntryProfile from "../components/Application/ListEntryProfile";
+import ListEntryProfile from "../components/Application/components/list/ListEntryProfile";
 
 describe("Test for List Entry for profile", () => {
   it("should render a profile correctly", async () => {

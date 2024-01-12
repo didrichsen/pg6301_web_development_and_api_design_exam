@@ -1,6 +1,6 @@
 import renderer, { act } from "react-test-renderer";
 import { ApiContext } from "../context/ApiContext";
-import CreateChatroom from "../components/Application/CreateChatroom";
+import CreateChatroom from "../components/Application/components/chatroom/CreateChatroom";
 import { MemoryRouter } from "react-router-dom";
 import { configureWebSocket } from "../utils/webSocket";
 

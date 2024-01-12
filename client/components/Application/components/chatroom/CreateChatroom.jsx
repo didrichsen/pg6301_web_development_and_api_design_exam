@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ApiContext } from "../../context/ApiContext";
-import { configureWebSocket } from "../../utils/webSocket";
-import HandleError from "../ErrorHandling/HandleError";
+import { ApiContext } from "../../../../context/ApiContext";
+import { configureWebSocket } from "../../../../utils/webSocket";
+import HandleError from "../../../ErrorHandling/HandleError";
+import "./createChatroom.css";
 
 const CreateChatroom = () => {
   const [chatroomTitle, setChatroomTitle] = useState("");
@@ -138,50 +139,63 @@ const CreateChatroom = () => {
   }
 
   return (
-    <div className="center-content-container">
-      <div style={{ marginBottom: "2em" }}>
+    <div className="create-chatroom-container">
+      <div className="heading-container">
         <h2 style={{ textAlign: "center", marginBottom: "0.5em" }}>
           Let's get you a room!
         </h2>
-        <h3>
-          Create a room. Either <span style={{ color: "red" }}>private</span> or{" "}
-          <span style={{ color: "green" }}>public</span>!
-        </h3>
       </div>
-      <form className="add-chatroom-form" onSubmit={handleSubmit}>
-        <label>
-          Enter Chatroom Title:
+      <form className="form" onSubmit={handleSubmit}>
+        <div className="container-form">
+          <div>
+        <div className="input-field-container">
+        <label htmlFor="title" className="input-label">
+          Enter Chatroom Title
+        </label>
           <input
+              id = "title"
             type={"text"}
             value={chatroomTitle}
             name="title"
             onChange={(e) => handleChatroomTitleChange(e.target.value)}
+              className="form-field-title"
           />
+        </div>
+
+        <div className="input-field-container">
+        <label htmlFor="description" className="input-label">
+          Enter Chatroom Description
         </label>
-        <label>
-          Enter Chatroom Description:
-          <textarea
+          <input
+              id="description"
             value={description}
             name="chatroomDescription"
             onChange={(e) => setDescription(e.target.value)}
-            rows={5}
-            style={{ width: "50em", marginTop: "2em" }}
+            className="form-field-description"
           />
+        </div>
+
+        <div className="input-field-container">
+        <label className="input-label">
+          Private Chatroom
         </label>
-        <label>
-          Private Chatroom:
           <input
             type={"checkbox"}
             checked={isPrivate}
             name="isPrivate"
             onChange={(e) => setIsPrivate(e.target.checked)}
           />
-        </label>
+
+        </div>
+          </div>
+          <div>
         {isPrivate ? (
           <>
-            <label>
-              Select Participants:
-              <select multiple={true} name="participants">
+            <div className="input-field-container">
+            <label className="input-label">
+              Select Participants
+            </label>
+              <select multiple={true} name="participants" className="select-style">
                 {participants.map((participant) => (
                   <option
                     key={participant._id}
@@ -192,10 +206,11 @@ const CreateChatroom = () => {
                   </option>
                 ))}
               </select>
-            </label>
-            <p>Participants selected:</p>
+            </div>
+            <div className="input-field-container">
+            <label className="input-label">Participants selected</label>
             {selectedParticipants.map((participant) => (
-              <div key={participant._id}>
+              <div key={participant._id} className="selected-participants">
                 {participant.name} ({participant.email})
                 {participant.email === user.email ? (
                   "(You)"
@@ -208,9 +223,17 @@ const CreateChatroom = () => {
                 )}
               </div>
             ))}
+            </div>
           </>
         ) : null}
-        <button disabled={isChatroomTitleTaken}>Submit</button>
+          </div>
+
+        </div>
+
+        <div className="button-container">
+          <button className="submit-button" disabled={isChatroomTitleTaken}>Submit</button>
+        </div>
+
       </form>
     </div>
   );

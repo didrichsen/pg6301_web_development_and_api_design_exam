@@ -1,5 +1,5 @@
-import LoginWithMicrosoft from "../Authentication/OpenIdConnect/ActiveDirectory/LoginWithMicrosoft";
-import LoginWithGoogle from "../Authentication/OpenIdConnect/Google/LoginWithGoogle";
+import LoginWithMicrosoft from "../OpenIdConnect/ActiveDirectory/LoginWithMicrosoft";
+import LoginWithGoogle from "../OpenIdConnect/Google/LoginWithGoogle";
 
 const LoginPage = ({ applicationConfig }) => {
   return (

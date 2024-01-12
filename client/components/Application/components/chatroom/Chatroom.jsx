@@ -1,8 +1,8 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useContext, useEffect, useMemo, useState } from "react";
-import {ApiContext} from "../../context/ApiContext";
-import { configureWebSocket } from "../../utils/webSocket";
-import HandleError from "../ErrorHandling/HandleError";
+import {ApiContext} from "../../../../context/ApiContext";
+import { configureWebSocket } from "../../../../utils/webSocket";
+import HandleError from "../../../ErrorHandling/HandleError";
 
 const Chatroom = () => {
   const { id } = useParams();
