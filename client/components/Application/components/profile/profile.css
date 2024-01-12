@@ -31,7 +31,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    padding: 1em;
+    padding: 3em;
 }
 
 .input-container > div:first-child{
@@ -51,7 +51,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: end;
-    padding: 1em;
+    padding: 3em;
 }
 
 .edit-button button {
@@ -64,7 +64,7 @@
 }
 
 .edit-button button:first-child {
-    background-color: var(--imperial-red);
+    background-color: var(--cadet-gray);
     color: #ffffff;
 }
 

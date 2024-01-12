@@ -65,8 +65,8 @@ const UserProfile = () => {
             <div>{users[currentIndex].bio}</div>
           </div>
           <div className="edit-button">
-            <button onClick={prevUser}>Previous User</button>
             <button onClick={nextUser}>Next User</button>
+            <button onClick={prevUser}>Previous User</button>
           </div>
         </>
       )}

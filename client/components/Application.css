@@ -14,7 +14,7 @@
 
 #root {
   height: 100vh;
-  background-color: white;
+  background-color: var(--rich-black);
   display: flex;
   flex-direction: column;
 }
