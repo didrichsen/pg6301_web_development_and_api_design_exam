@@ -1,12 +1,10 @@
-/*
-    * This file contains the CSS for the entire application.
-    Colour scheme:
-    #0E131F - Rich Black
-    #38405F - Delf Blue
-    #59546C - English Violet
-    #8B939C - Cadet Gray
-    #FF0035 - Imperial Red
- */
+:root {
+  --rich-black: #0E131F;
+  --delf-blue: #38405F;
+  --english-violet: #59546C;
+  --cadet-gray: #8B939C;
+  --imperial-red: #FF0035;
+}
 
 * {
   margin: 0;
