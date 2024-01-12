@@ -1,33 +1,34 @@
 # **Introduction**
 
-This is an exam project for the course PG6301 - Web Development and API Design at Kristiana University College.
+This is a practical exam designed to assess your mastery of the technologies and concepts covered in the course: React, Express, MongoDB, Heroku, Jest, OpenId Connect, and Web Sockets. The practical nature of the exam means that you will be evaluated based on what you create and how it functions, rather than theoretical knowledge you have acquired. To demonstrate this, you are required to build an application where users can communicate in a chatroom. The learning objectives that the exam aims to demonstrate are as follows:
 
-The technologies that have been taught throughout this course are React, Node.js, Express, MongoDB, Websockets, Google OAuth and Microsoft Entra ID.
-A more detailed description of the exam can be read in the file "PG6301 eksamen 2023(Norwegian).pdf".
+1. Create an app using Parcel, Express, Concurrently, Prettier, and Jest.
+2. Set up a functional React app with React Router, handling loading state, and error handling.
+3. Establish a functional Express app, including Express Routes in a separate file.
+4. Implement communication between the client and server using GET, PUT, and POST, including error handling.
+5. Deployment to Heroku.
+6. Storage, retrieval, and updating of data in MongoDB.
+7. Login with OpenId Connect (both Google and Microsoft Entra ID).
+8. Implement Websockets.
+9. Achieve test coverage between 50-70%.
+   
+The exam will assess your ability to execute these tasks, showcasing your practical skills in applying the mentioned technologies and concepts.
 
-The exam got graded with an A.
+## Task Description
 
-## Project description
+You are tasked with implementing a web-based chat solution with user profiles. 
 
-The project is an application where you can create chatrooms with different subjects. Chatrooms can be
-created by registered users. They can be private or public. Public chatrooms can be joined by
-anyone. Private chatrooms can only be joined if you are whitelisted.
+When a user visits the website, 
+they should be presented with an introduction to the site and the option to log in using at least two identity providers. 
+You can use Google, Microsoft Entra ID, or implement Facebook or Github if you prefer. 
 
-Link to heroku deployment:https://exam-web-dev-and-api-design-7ff1a0be6f3c.herokuapp.com/
+Once logged in, a user should be able to chat with other users and view previous chat messages.
 
-Link to github:https://github.com/didrichsen/Kristiania-WebDevAndAPI-Exam-PG301
+## **Solution** 
 
-## **How to run**
+Link to heroku deployment: https://exam-web-dev-and-api-design-7ff1a0be6f3c.herokuapp.com/
 
-- Clone the project
-- Create a .env file in root folder with the following:
-  - MONGODB=<<"Your connection string">>
-  - CLIENT_ID_GOOGLE=<<"Your google client id">>
-  - OPEN_ID_CONFIGURATION_GOOGLE= https://accounts.google.com/.well-known/openid-configuration
-  - CLIENT_ID_MICROSOFT=<<"Your microsoft client id">>
-  - OPEN_ID_CONFIGURATION_MICROSOFT=https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration
-  - COOKIE_SECRET=<<"Your cookie secret">>
-- Run npm install in root folder
+Link to github: https://github.com/didrichsen/Kristiania-WebDevAndAPI-Exam-PG301
 
 ## **Functional Requirements**
 
@@ -74,7 +75,7 @@ Link to github:https://github.com/didrichsen/Kristiania-WebDevAndAPI-Exam-PG301
 
 There are implemented both frontend and backend tests.
 
-Frontend have simulation- and snapshot tests.
+Frontend has simulation- and snapshot tests.
 
 Backend tests are using a test-database, so create a .env file with the following:
 
