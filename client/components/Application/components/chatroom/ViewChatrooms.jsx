@@ -3,6 +3,7 @@ import ListEntryChatrooms from "../list/ListEntryChatrooms";
 import { ApiContext } from "../../../../context/ApiContext";
 import { configureWebSocket } from "../../../../utils/webSocket";
 import HandleError from "../../../ErrorHandling/HandleError";
+import './viewChatrooms.css';
 
 const ViewChatrooms = () => {
   const [message, setMessage] = useState([]);
@@ -56,31 +57,33 @@ const ViewChatrooms = () => {
   }
 
   return (
-    <>
-      {chatrooms && chatrooms.length === 0 ? (
-        <div className="center-content-container">
-          No chatrooms to show. Create a room to start chatting!
-        </div>
-      ) : (
-        <>
-          <h2 style={{ textAlign: "center" }}>Chatrooms</h2>
-          <h3 style={{ textAlign: "center", marginTop: "1em" }}>
-            Join a green-room!
-          </h3>
-          <div className="chatroom-list">
-            {chatrooms.map((c) => (
-              <ListEntryChatrooms key={c._id} chatroom={c} />
-            ))}
-          </div>
-          <p style={{ textAlign: "center" }}>Latest chatrooms created</p>
-          {message.map((m, index) => (
-            <div key={index} style={{ textAlign: "center" }}>
-              {m}
+      <div className="view-chatrooms-container">
+        {chatrooms && chatrooms.length === 0 ? (
+            <div className="chatroom-title">
+              No chatrooms to show. Create a room to start chatting!
             </div>
-          ))}
-        </>
-      )}
-    </>
+        ) : (
+            <>
+              <div className="chatrooms-list">
+                <h2 className="chatroom-title">Chatrooms</h2>
+                <h3 className="chatroom-title">
+                  You can join private rooms where you are a member, or a room that's open for everyone.
+                </h3>
+              </div>
+              <div className="list-chatrooms-container">
+                <div className="chatroom-list">
+                  {chatrooms.map((c) => (
+                      <ListEntryChatrooms key={c._id} chatroom={c} />
+                  ))}
+                </div>
+                <p>Latest chatrooms created</p>
+                {message.map((m, index) => (
+                    <div key={index}>{m}</div>
+                ))}
+              </div>
+            </>
+        )}
+      </div>
   );
 };
 

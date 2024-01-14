@@ -140,16 +140,11 @@ const CreateChatroom = () => {
 
   return (
     <div className="create-chatroom-container">
-      <div className="heading-container">
-        <h2 style={{ textAlign: "center", marginBottom: "0.5em" }}>
-          Let's get you a room!
-        </h2>
-      </div>
       <form className="form" onSubmit={handleSubmit}>
         <div className="container-form">
           <div>
         <div className="input-field-container">
-        <label htmlFor="title" className="input-label">
+        <label htmlFor="title" className="create-room-label">
           Enter Chatroom Title
         </label>
           <input
@@ -163,7 +158,7 @@ const CreateChatroom = () => {
         </div>
 
         <div className="input-field-container">
-        <label htmlFor="description" className="input-label">
+        <label htmlFor="description" className="create-room-label">
           Enter Chatroom Description
         </label>
           <input
@@ -176,7 +171,7 @@ const CreateChatroom = () => {
         </div>
 
         <div className="input-field-container">
-        <label className="input-label">
+        <label className="create-room-label">
           Private Chatroom
         </label>
           <input
@@ -192,7 +187,7 @@ const CreateChatroom = () => {
         {isPrivate ? (
           <>
             <div className="input-field-container">
-            <label className="input-label">
+            <label className="create-room-label">
               Select Participants
             </label>
               <select multiple={true} name="participants" className="select-style">
@@ -201,14 +196,16 @@ const CreateChatroom = () => {
                     key={participant._id}
                     value={participant._id}
                     onClick={() => handleParticipantChange(participant._id)}
+                    className="members-li"
+
                   >
                     {participant.name} ({participant.email})
                   </option>
                 ))}
               </select>
             </div>
-            <div className="input-field-container">
-            <label className="input-label">Participants selected</label>
+            <div className="input-field-container ">
+            <label className="create-room-label ">Participants selected</label>
             {selectedParticipants.map((participant) => (
               <div key={participant._id} className="selected-participants">
                 {participant.name} ({participant.email})

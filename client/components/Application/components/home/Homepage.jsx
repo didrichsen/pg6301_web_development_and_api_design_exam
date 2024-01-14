@@ -6,7 +6,7 @@ const Homepage = () => {
 
   return (
     <div className="center-content-container">
-      <h1>
+      <h1 style={{color:"#8B939C"}}>
         Welcome, {user.name} ({user.email})
       </h1>
       <div className="container-welcome-message"></div>

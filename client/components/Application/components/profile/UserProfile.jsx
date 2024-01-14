@@ -56,11 +56,7 @@ const UserProfile = () => {
             <div>Username</div>
             <div>{users[currentIndex].name}</div>
           </div>
-          <div className="input-email input-container">
-            <div>Email</div>
-            <div>{users[currentIndex].email}</div>
-          </div>
-          <div className="input-bio input-container">
+          <div className="input-container input-bio-browse-users">
             <div>Bio</div>
             <div>{users[currentIndex].bio}</div>
           </div>
