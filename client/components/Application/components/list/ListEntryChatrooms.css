@@ -1,0 +1,14 @@
+.chatroom-preview-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #8B939C;
+}
+
+.heading-style{
+    color: var(--english-violet);
+    font-size: large;
+    font-weight: bold;
+    padding: 0.5em;
+}

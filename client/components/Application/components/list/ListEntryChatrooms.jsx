@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { ApiContext } from "../../../../context/ApiContext";
-import "../chatroom/viewChatrooms.css";
+import "./listEntryChatrooms.css";
+
 
 const ListEntryChatrooms = ({ chatroom }) => {
     const { _id, chatroomTitle, description, admin, isPrivate, participants } =
@@ -12,13 +13,13 @@ const ListEntryChatrooms = ({ chatroom }) => {
     const userIsParticipant = participants.some((p) => p.email === user.email);
 
     return (
-        <div className={`list-entry ${userIsParticipant ? 'user-participant' : ''}`}>
+        <div className="chatroom-preview-container">
             {userIsParticipant || !isPrivate ? (
-                <Link to={`/chatroom/${_id}`} className="custom-link">
-                    <h3 className="chatroom-title">{chatroomTitle}</h3>
+                <Link to={`/chatroom/${_id}`}>
+                    <h3 className="heading-style">{chatroomTitle}</h3>
                 </Link>
             ) : (
-                <h3 className="private-chatroom">{chatroomTitle}</h3>
+                <h3 className="heading-style">{chatroomTitle}</h3>
             )}
             <p>
                 <strong>Description:</strong>

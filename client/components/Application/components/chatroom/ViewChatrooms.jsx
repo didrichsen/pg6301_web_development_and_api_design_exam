@@ -59,14 +59,14 @@ const ViewChatrooms = () => {
   return (
       <div className="view-chatrooms-container">
         {chatrooms && chatrooms.length === 0 ? (
-            <div className="chatroom-title">
+            <div className="view-chatrooms-heading">
               No chatrooms to show. Create a room to start chatting!
             </div>
         ) : (
             <>
-              <div className="chatrooms-list">
-                <h2 className="chatroom-title">Chatrooms</h2>
-                <h3 className="chatroom-title">
+              <div className="heading-container">
+                <h2 className="view-chatrooms-heading">Chatrooms</h2>
+                <h3 className="view-chatrooms-heading">
                   You can join private rooms where you are a member, or a room that's open for everyone.
                 </h3>
               </div>
@@ -76,10 +76,12 @@ const ViewChatrooms = () => {
                       <ListEntryChatrooms key={c._id} chatroom={c} />
                   ))}
                 </div>
+                <div className="live-update-container">
                 <p>Latest chatrooms created</p>
                 {message.map((m, index) => (
                     <div key={index}>{m}</div>
                 ))}
+                </div>
               </div>
             </>
         )}

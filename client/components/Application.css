@@ -15,12 +15,14 @@
 #root {
   height: 100vh;
   background-color: var(--rich-black);
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows:  50px 1fr 50px;
+  grid-template-columns: 1fr;
 }
 
 main {
-  flex: 1;
+    grid-row: 2/3;
+    grid-column: 1/2;
 }
 
 /*Login buttons and link*/
@@ -75,12 +77,14 @@ nav .divider {
 }
 
 .nav-container {
-  height: 8%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: #0e131f;
   border-bottom: 1px solid white;
+  grid-row: 1/2;
+  grid-column: 1/2;
+
 }
 
 /*Navbar end*/
@@ -112,18 +116,6 @@ nav .divider {
 .custom-link:hover {
   color: #59546c;
   text-decoration: underline;
-}
-
-/*Movie List*/
-
-.chatroom-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 5em;
-  max-width: 80%;
-  margin: 0 auto;
-  gap: 0.7em;
 }
 
 /*Movie Details*/
@@ -205,6 +197,8 @@ nav .divider {
 
 footer {
   background-color: #0e131f;
+  grid-row: 3/4;
+  grid-column: 1/2;
 }
 
 .center-content-container {
