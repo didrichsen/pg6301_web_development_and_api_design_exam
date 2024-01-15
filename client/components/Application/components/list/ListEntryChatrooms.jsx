@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { ApiContext } from "../../../../context/ApiContext";
-import "./listEntryChatrooms.css";
+import './listEntryChatrooms.css';
 
 
 const ListEntryChatrooms = ({ chatroom }) => {
